@@ -1,0 +1,17 @@
+<!-- hero -->
+{% if page.image %} 
+        <div class="row  no-padding mb-0">
+          <div class="col s12 m12 l12 no-padding">
+            <div class="card mt-0">
+              <div class="card-image" style="height:540px; overflow: hidden;">
+                 <img src={{ page.image | prepend: site.baseurl }} alt="{{ page.title }}" title="{{ page.title }}" class="responsive-img">
+                 <span class="card-title">
+                    <h1>{{ page.tagline }}</h1>
+                </span>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+{% endif %}
+<!-- end hero -->

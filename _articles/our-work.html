@@ -1,0 +1,33 @@
+---
+layout: index_layout
+group: "navigation"
+title: Our work
+image: /images/trumpets.jpg
+order: 1
+tagline: 
+---
+<div class="row">
+	<ul class="post-list">
+    
+    {% capture tag %}{{ page.title | slugify }}{% endcapture %}
+
+    {% for page in site.posts %}
+      {% if page.tags contains tag %}
+      <li>
+        <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
+        <h2><a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h2>
+        {{ page.excerpt }}
+        <a href="{{ page.url | prepend: site.baseurl }}" rel="nofollow">Continue reading &rarr;</a>
+      </li>
+      {% endif %}
+    {% endfor %}
+     
+  </ul>
+</div>
+	
+</div>
+<div class="row">
+{% for page in site.portfolio %}
+	{% include excerpt.html %} 
+{% endfor %}
+</div>

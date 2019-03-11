@@ -1,13 +1,12 @@
-<!-- navigation -->
+<!-- navigation version 2-->
 <nav>
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo">gavrilescu</a>
+    <!-- <a href="/" class="brand-logo">gavrilescu</a> -->
+    <a href="/" class="brand-logo"><img src="{{ site.url }}/assets/gavrilescu-naming-logo.svg" style="height:48px; margin:8px; " /></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="">Naming portfolio</a></li>
-      <li><a href="">Our naming process</a></li>
-      <li><a href="">Learn about naming</a></li>
-      <li><a href="">Naming works</a></li>
-      <li><a href="">Contact</a></li>
+		{% assign pages_list = site.articles | sort:"order" %}
+  		{% assign group = 'navigation' %}
+		{% include pages_list %}
     </ul>
   </div>
 </nav>

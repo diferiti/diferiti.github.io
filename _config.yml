@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+# Welcome to Jekyll, version 3.8.5
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -13,16 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: Portfolio
+email: hello@diferiti.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This is a portfolio site based on jekyll. It also helped learning to use static site generators.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: none
-github_username:  none
+#twitter_username: none
+#github_username:  none
 include: ['_pages']
 
 # Build settings
@@ -30,6 +28,37 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
+site.excerpt_separator: "<!--more-->"
+
+sass:
+    sass_dir: ./_sass
+
+#collections instead of posts
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+  articles:
+    output: true 
+    permalink: /articles/:path/
+#plugins
+plugins:
+    - jekyll-admin
+
+
+#jekyll admin
+jekyll_admin:
+  hidden_links:
+    - posts
+    - datafiles
+    - configuration
+    - staticfiles
+
+#collections_dir: _pages
+
+#permalink: :title:output_ext
+#permalink: :title
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

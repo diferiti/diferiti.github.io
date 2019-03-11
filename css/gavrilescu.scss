@@ -1,0 +1,179 @@
+---
+---
+@charset "UTF-8";
+
+// material
+@import "components/_color-variables";
+
+
+// color variables
+$primary: #333852;
+$primary80: #33385280;
+$primary10: #33385210;
+$primary6: #33385206;
+$white: #ffffff;
+
+// typography
+$font-stack: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
+$off-black: rgba(0, 0, 0, 0.87) !default;
+//font sizes
+// Header Styles
+//$h1-fontsize: 4.2rem !default;
+$h1-fontsize: 2.66rem !default;
+//$h2-fontsize: 3.56rem !default;
+$h2-fontsize: 2rem !default;
+//$h3-fontsize: 2.92rem !default;
+$h3-fontsize: 1.55rem !default;
+//$h4-fontsize: 2.28rem !default;
+$h4-fontsize: 1.33rem !default;
+//$h5-fontsize: 1.64rem !default;
+$h5-fontsize: 1rem !default;
+//$h6-fontsize: 1.15rem !default;
+$h6-fontsize: 0.9rem !default;
+
+body {
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
+// material
+@import "materialize";
+
+// font sizes
+  @media only screen and (min-width: 0) {
+    font-size: 16px;
+  }
+
+  @media only screen and (min-width: $medium-screen) {
+    font-size: 16.5px;
+  }
+
+  @media only screen and (min-width: $large-screen) {
+    font-size: 18px;
+  }
+@import "components/_typography";
+@import "components/_navbar";
+
+
+// font sizes
+  @media only screen and (min-width: 0) {
+    font-size: 16px;
+  }
+
+  @media only screen and (min-width: $medium-screen) {
+    font-size: 16.5px;
+  }
+
+  @media only screen and (min-width: $large-screen) {
+    font-size: 18px;
+  }
+// helpers
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+.mt-0 {
+	margin-top: 0 !important;
+}
+
+.link {
+	cursor:pointer;
+}
+.top {
+	top:0;
+	bottom:auto;
+}
+
+// card
+.card-image {
+	top:1px;
+}
+.card .ghost {
+    border-top: none;
+    position: relative;
+    padding: 16px 0 0 0;
+}
+.bg-blue {
+	background-color: $primary-color;
+	color: $white;
+}
+//other font sizes
+html {
+	font-size:18px;
+}
+h5 {
+	font-weight: 800;
+  text-transform: uppercase;
+}
+
+//nav
+nav {
+  background-color: $white;
+  .brand-logo {
+          margin-left: 1rem;
+          font-size: 1rem;
+          color:$primary;
+        }//.brand-logo
+  ul {
+    li {
+          &.active {
+              background-color: $primary10;
+            }
+          a {
+              color: $primary;
+              &:hover {
+                background-color: $primary6;
+              } 
+            }//a
+        }//li
+      }//ul
+}//nav
+
+
+//homepage 
+
+ .homeCards .card-image {
+  max-height:300px;
+ }
+
+ .naming-works strong {
+  text-transform: lowercase;
+  text-transform: capitalize;
+ }
+
+
+ .chip {
+  &:focus {
+    outline: none;
+    background-color: $chip-selected-color;
+    color: #fff;
+  }
+
+  display: inline-block;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(0,0,0,.6);
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: $chip-bg-color;
+  margin-bottom: $chip-margin;
+  margin-right: $chip-margin;
+
+  > img {
+    float: left;
+    margin: 0 8px 0 -12px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+  }
+
+  .close {
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 8px;
+  }
+}

@@ -1,22 +1,11 @@
 ---
-layout: diferiti
+layout: index_layout
 title: Title
+image: /images/trumpets.jpg
 ---
-<!-- hero -->
-<div class="row  no-padding mb-0">
-  <div class="col s12 m12 l12 no-padding">
-    <div class="card mt-0">
-      <div class="card-image" style="height:540px; overflow: hidden;">
-         <img src="/images/trumpets2.jpg" class="responsive-img" style="top:-500px;">
-         <span class="card-title">
-          <div class="col s12 m6 l6">
-            <h1>Naming is believing, and believing is living, and living is thinking.</h1>
-            
-          </div>
-        </span>
-      </div>
-    </div>
-   
-  </div>
+{% include hero.html %} 
+<div class="row">
+{% for page in site.portfolio %}
+	{% include excerpt.html %} 
+{% endfor %}
 </div>
-<!-- .row hero -->

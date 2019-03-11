@@ -1,0 +1,27 @@
+<!-- EXCERPT CARD 4 COLS -->
+  <div class="col s12 m6 l4 homeCards">
+    <!-- <div class="card"> -->
+
+          <div class="card {% for tag in page.tags %} {{ tag }}  {% endfor %}">
+      <div class="card-image waves-effect waves-block waves-light">
+        <!-- <img class="activator" src="/images/trumpets.jpg"> -->
+        <img class="activator" src="{{ page.image | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}">
+
+      </div>
+      <div class="card-content">
+          <span class="card-title activator">{{ page.title }}</span>
+         <!--  <div class="chip bg-blue">Naming</div> -->
+          {% for tag in page.tags %}
+          <div class="chip">{{ tag }}</div>
+          {% endfor %}
+      
+      <div class="card-action ghost">
+        <p><span class="activator blue-text link">Details</span></p>
+      </div>  
+      </div>             
+      <div class="card-reveal"> 
+         <span class="card-title activator">{{page.title}}<i class="material-icons right">close</i></span>
+          {{ page.excerpt }}
+      </div>
+    </div><!-- .card -->
+  </div><!-- .col s12 m4 -->

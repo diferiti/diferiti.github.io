@@ -1,0 +1,26 @@
+---
+layout: index_layout
+group: "navigation"
+title: Test
+image: /images/trumpets.jpg
+order: 1
+tags: real-estate business
+---
+<ul class="tags3">
+  {% for tag in page.tags %}
+    <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+  {% endfor %}
+</ul>
+
+
+
+<div class="row">
+  <div class="col s12 m12 l12">
+  	<span class="healthFilter">Health</span>
+  </div>
+</div>	
+<div class="row">
+{% for page in site.portfolio %}
+	{% include excerpt.html %} 
+{% endfor %}
+</div>
