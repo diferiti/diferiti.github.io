@@ -1,8 +1,8 @@
 <!-- EXCERPT CARD 4 COLS -->
-  <div class="col s12 m6 l4 homeCards">
+  <div class="col s12 m6 l4 homeCards {% for tag in page.tags %}{{ tag }} {% endfor %}">
     <!-- <div class="card"> -->
 
-          <div class="card {% for tag in page.tags %} {{ tag }}  {% endfor %}">
+          <div class="card">
       <div class="card-image waves-effect waves-block waves-light">
         <!-- <img class="activator" src="/images/trumpets.jpg"> -->
         <img class="activator" src="{{ page.image | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}">
@@ -22,6 +22,9 @@
       <div class="card-reveal"> 
          <span class="card-title activator">{{page.title}}<i class="material-icons right">close</i></span>
           {{ page.excerpt }}
+          {% if page.content contains '<!--more-->' %}
+            <p><span class="activator blue-text link caseStudy"><a href="{{ page.url }}" class="caseStudyLink">Case study</a></span></p>
+          {% endif %}
       </div>
     </div><!-- .card -->
   </div><!-- .col s12 m4 -->

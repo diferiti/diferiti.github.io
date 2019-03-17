@@ -7,7 +7,7 @@ tags: naming branding
 image: /images/temp.png
 tagline: 
 year: 2016
-tags: food&beverage business
+tags: food-beverage business
 ---
 
 Artisan Bread, Iași 2016

@@ -3,8 +3,12 @@ layout: index_layout
 title: Title
 image: /images/trumpets.jpg
 ---
+
+
+
 {% include hero.html %} 
-<div class="row">
+{% include excerpt_filters.html%}
+<div class="row grid">
 {% for page in site.portfolio %}
 	{% include excerpt.html %} 
 {% endfor %}

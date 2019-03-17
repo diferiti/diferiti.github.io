@@ -1,0 +1,20 @@
+---
+layout: index_layout
+group: "navigation"
+title: Port
+image: /images/trumpets.jpg
+order: 1
+tags: real-estate business
+# https://www.stefan.lu/blog/tag-cloud-in-jekyll-no-plugins/
+---
+{% include excerpt_filters.html%}
+
+
+<div class="row grid">
+  {% for page in site.portfolio %}
+      {% include excerpt.html %}
+  {% endfor %}
+</div>  
+
+
+<!-- TODO change food-beverage into food-and-beverage -->

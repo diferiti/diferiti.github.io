@@ -1,0 +1,17 @@
+---
+layout: index_layout
+group: "navigation"
+title: Portfolio with filters
+# https://www.stefan.lu/blog/tag-cloud-in-jekyll-no-plugins/
+---
+<div class="row mb-0 mt-20">
+{% include excerpt_filters.html%}
+</div>
+<div class="row grid">
+  {% for page in site.portfolio %}
+      {% include excerpt.html %}
+  {% endfor %}
+</div>  
+
+
+<!-- TODO change food-beverage into food-and-beverage -->

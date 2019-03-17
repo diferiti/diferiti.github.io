@@ -10,7 +10,7 @@
 {% if page.content contains '<!--more-->' %}
  {{ page.content | split:'<!--more-->' | last }}
 {% else %}
- {{ page.excerpt }}
+ {{ page.content }}
 {% endif %}
 
           	

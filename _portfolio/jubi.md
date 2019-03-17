@@ -7,7 +7,7 @@ tags: naming branding
 image: /images/temp.png
 tagline: 
 year: 2015
-tags: food&beverage business
+tags: food-beverage business
 ---
 
 Premium Birch Water, London 2015

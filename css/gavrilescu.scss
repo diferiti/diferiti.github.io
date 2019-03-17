@@ -3,7 +3,8 @@
 @charset "UTF-8";
 
 // material
-@import "components/_color-variables";
+// @import "components/_color-variables";
+@import "components/_color";
 
 
 // color variables
@@ -12,6 +13,9 @@ $primary80: #33385280;
 $primary10: #33385210;
 $primary6: #33385206;
 $white: #ffffff;
+$black: rgba(0, 0, 0, 0.87) !default;
+$black70: rgba(0, 0, 0, 0.7);
+$dropdown-color: $black70;
 
 // typography
 $font-stack: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
@@ -74,6 +78,9 @@ body {
 }
 .mt-0 {
 	margin-top: 0 !important;
+}
+.mt-20 {
+  margin-top: 20px !important;
 }
 
 .link {
@@ -175,5 +182,17 @@ nav {
     font-size: 16px;
     line-height: 32px;
     padding-left: 8px;
+  }
+}
+.nav-wrapper {
+  overflow: hidden;
+}
+
+.filters {
+  span {
+    cursor: pointer;
+    &.is-checked {
+      color:#ff0000;
+    }
   }
 }

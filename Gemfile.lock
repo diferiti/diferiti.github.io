@@ -39,6 +39,8 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
       jekyll (~> 3.3)
+    jekyll-tagging (1.1.0)
+      nuggets
     jekyll-watch (2.1.2)
       listen (~> 3.0)
     kramdown (1.17.0)
@@ -53,6 +55,7 @@ GEM
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     multi_json (1.13.1)
+    nuggets (1.6.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.3)
@@ -92,6 +95,7 @@ DEPENDENCIES
   jekyll (~> 3.7.4)
   jekyll-admin
   jekyll-feed (~> 0.6)
+  jekyll-tagging
   minima (~> 2.0)
   tzinfo-data
 

@@ -26,8 +26,10 @@ include: ['_pages']
 # Build settings
 markdown: kramdown
 theme: minima
+plugins_dir: _plugins
 plugins:
-  - jekyll-feed
+  #- jekyll-feed
+  - jekyll-admin
 
 site.excerpt_separator: "<!--more-->"
 
@@ -42,10 +44,9 @@ collections:
   articles:
     output: true 
     permalink: /articles/:path/
-#plugins
-plugins:
-    - jekyll-admin
-
+  tags: 
+    output: true
+    permalink: /tags/:path/
 
 #jekyll admin
 jekyll_admin:
@@ -54,6 +55,10 @@ jekyll_admin:
     - datafiles
     - configuration
     - staticfiles
+
+# Tags for portfolio
+tag_dir: tags/
+
 
 #collections_dir: _pages
 
