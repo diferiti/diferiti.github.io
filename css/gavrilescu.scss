@@ -31,7 +31,7 @@ $h3-fontsize: 1.55rem !default;
 //$h4-fontsize: 2.28rem !default;
 $h4-fontsize: 1.33rem !default;
 //$h5-fontsize: 1.64rem !default;
-$h5-fontsize: 1rem !default;
+//$h5-fontsize: 1rem !default;
 //$h6-fontsize: 1.15rem !default;
 $h6-fontsize: 0.9rem !default;
 
@@ -92,6 +92,9 @@ body {
 }
 
 // card
+.card-title {
+  text-transform: capitalize;
+}
 .card-image {
 	top:1px;
 }

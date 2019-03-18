@@ -64,5 +64,5 @@ MATERILIZE
 $(document).ready(function() {
     $('select').material_select();
     $('.select-wrapper span.caret').html('<i class="material-icons" style="line-height: inherit; color: #00000070; font-size: 24px;">expand_more</i>');
-    // $('.select-wrapper span.caret').html('<i class="material-icons" style="line-height: inherit; color: #00000070; font-size: 28px;">arrow_drop_down</i>');
   });
+

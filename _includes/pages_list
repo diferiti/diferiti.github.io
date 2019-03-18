@@ -1,3 +1,7 @@
+{% comment %}
+    This is used for the list of pages in the navigation.
+{% endcomment %}
+
 {% for node in pages_list %}
   {% if group == null or group == node.group %}
     {% if page.url == node.url %}
