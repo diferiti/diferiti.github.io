@@ -17,4 +17,4 @@ Club of Healthy Beauty & Dermatology in ARCADIA Hospitals, Iași 2008
 
 # Abeauty
 
-This is a case study for a client. We can add here anything we want. For example, we can add pictures, flying dogs or [cinnamon](http://www.cinnamon.com).
+This is a case study for a client. We can add here anything we want. For example, we can add pictures, flying dogs or [cinnamons](http://www.cinnamon.com).
