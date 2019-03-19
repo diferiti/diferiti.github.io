@@ -24,7 +24,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 include: ['_pages']
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+#redcarpet:
+  #extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "strikethrough", "superscript", "with_toc_data"]
+
+highlighter: rouge
+
 theme: minima
 plugins_dir: _plugins
 plugins:

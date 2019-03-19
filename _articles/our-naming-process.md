@@ -7,8 +7,6 @@ image: /images/trumpets.jpg
 order: 2
 tagline: 
 ---
-
-
 # Verbal identity development process
 
 ### Briefing
