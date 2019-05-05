@@ -11,19 +11,37 @@
 {% assign all_tags = all_tags | uniq %}
 
 <!-- end tags -->
-<div class="row mb-0">
-    <span>Sort by year - newest / oldest</span>
+<div class="row mb-1 mt-1">
+  <!-- sort -->
+    <div class="col s12 m3 l3">
+      <label>Sort by year</label>
+  <select class="browser-default">
+    <option value="1">Newest</option>
+    <option value="2">Oldest</option>
+  </select>
+</div>
+
   <!-- dropdown filters industry -->
-  <div class="input-field col s12 m4 l2">
-    <select class="filters-select">
+  <div class="col s12 m3 l3">
+    <label>Project types</label>
+    <select class="browser-default" id="filter-project-type">
       <option value="*">show all</option>
        {% for tag in all_tags %}  
       <option value=".{{tag | uri_escape}}">{{ tag }}</option>
        {% endfor %}
     </select>
-    <label>Project types</label>
   </div>
 <!-- typology -->
-  <span>filter by type: nume de produs, nume de firma, nume eveniment, proiecte probono, clase de nume pentru HORECA</span>
+  <div class="col s12 m3 l3">
+      <label>Industry</label>
+  <select class="browser-default">
+    <option value="1">All</option>
+    <option value="2">Nume de produs</option>
+    <option value="">Nume de firma</option>
+    <option value="">Nume eveniment</option>
+    <option value="">Proiecte probono</option>
+    <option value="">Clase de nume pentru HORECA</option>
+  </select>
+</div>
   </div><!-- .row -->
   

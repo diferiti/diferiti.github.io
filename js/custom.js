@@ -44,9 +44,10 @@ $('.filter-item').each( function( i,Filters ) {
 
 
 // FUNCTIONS FOR SELECT
+// filter by project type
 
 // bind filter on select change
-$('.filters-select').on( 'change', function() {
+$('#filter-project-type').on( 'change', function() {
   // get filter value from option value
   var filterValue = this.value;
   // use filterFn if matches value
@@ -64,5 +65,13 @@ MATERILIZE
 $(document).ready(function() {
     $('select').material_select();
     $('.select-wrapper span.caret').html('<i class="material-icons" style="line-height: inherit; color: #00000070; font-size: 24px;">expand_more</i>');
+ 
+ //prevent flickr
+
+ $('.filters-select').on('mousedown',function(event){
+ // event.preventDefault();
+  console.log("down");
+})
+ //end ready function
   });
 
