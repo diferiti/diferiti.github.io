@@ -9,5 +9,5 @@ tagline:
 ---
 
 {% for post in site.posts %}
-      {{ post.content | markdownify }}
+{{ post.content | markdownify }}
 {% endfor %}
