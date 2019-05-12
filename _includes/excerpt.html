@@ -1,5 +1,5 @@
 <!-- EXCERPT CARD 4 COLS -->
-  <div class="col s12 m6 l4 homeCards {% for tag in page.tags %}{{ tag }} {% endfor %}">
+  <div class="col s12 m6 l4 homeCards {% for tag in page.tags %}{{ tag }} {% endfor %}" data-year="{{ page.year }}" data-name="{{ page.title }}">
     <!-- <div class="card"> -->
 
           <div class="card">
@@ -14,7 +14,7 @@
           {% for tag in page.tags %}
           <div class="chip">{{ tag }}</div>
           {% endfor %}
-      
+          {{ page.year }}
       <div class="card-action ghost">
         <p><span class="activator blue-text link">Details</span></p>
       </div>  

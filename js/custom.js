@@ -12,6 +12,10 @@ ISOTOPE
 // init Isotope
 var $grid = $('.grid').isotope({
   itemSelector: '.homeCards',
+  getSortData: {
+    year:'[data-year] parseInt',
+    name:'[data-name]',
+  }
 });
 
 // filter functions
@@ -55,6 +59,23 @@ $('#filter-project-type').on( 'change', function() {
   $grid.isotope({ filter: filterValue });
 });
 
+// FUNCTIONS FOR SORTING BY YEAR
+$('#filter-year').change(function(){
+  var sortValue =  $(this).find(':selected').attr('data-sort-value');
+  var direction = $(this).find(':selected').attr('data-sort-direction');
+   /* convert it to a boolean */
+    var isAscending = (direction == 'asc');
+    var newDirection = (isAscending) ? 'desc' : 'asc';
+  /* pass it to isotope */
+
+  if (sortValue == "") {
+    $grid.isotope({ sortBy : 'original-order' });
+  } else { 
+    $grid.isotope({ sortBy: sortValue, sortAscending: isAscending });
+    $(this).attr('data-sort-direction', newDirection);
+  }
+});
+
 /*
 
 MATERILIZE
@@ -75,3 +96,7 @@ $(document).ready(function() {
  //end ready function
   });
 
+// OTHER
+
+//class="responsive-img"
+$(".post").find("img").addClass("responsive-img");

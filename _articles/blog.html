@@ -9,5 +9,9 @@ tagline:
 ---
 
 {% for post in site.posts %}
-{{ post.content | markdownify }}
+<div class="post">
+    <h1 class="title">{{ post.title }}</h1>
+{{ post.excerpt | markdownify }}
+<a href="{{ post.url }}">Read more</a>
+</div>
 {% endfor %}
